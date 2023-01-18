@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'inventory',
     'customer',
     'order',
-    'checkout'
+    'checkout',
+    'token_auth'
 ]
 
 REST_FRAMEWORK = {
