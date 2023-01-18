@@ -118,8 +118,7 @@ git clone https://github.com/thegeektets/ilara-health-django
 pip install -r requirements.txt
 
 
-3. Create a new file in the project folder named "my.cnf" and configure the mysql settings as per your setup.
-
+3. update database settings on settings.py
 4. Run migrations to create the necessary tables in the database:
 
 python manage.py makemigrations
