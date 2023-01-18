@@ -50,6 +50,11 @@ HTTP/1.1 400 Bad Request
 This endpoint will return an authentication token to be used for subsequent requests.
 
 ### Inventory
+
+The application provides the following endpoints for managing inventory items:
+
+#### Retrieve a list of all inventory items
+Endpoint:
 - `GET /inventory` - Retrieve a list of all items in the inventory
 - `GET /inventory/:id` - Retrieve a specific item by its ID
 - `POST /inventory` - Add a new item to the inventory
