@@ -159,18 +159,3 @@ sudo apt-get install libmysqlclient-dev
 
 
 
-## Support
-
-Please feel free to reach out to the development team in case of any queries or issues.
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch with a descriptive name (e.g. `feature/new-login-page`)
-3. Commit your changes
-4. Create a pull request
-
-Please make sure to follow the [Django's coding style](https://docs.djangoproject.com/en/3.2/internals/contributing/writing-code/coding-style/) while contributing to the project.
-
-
-
