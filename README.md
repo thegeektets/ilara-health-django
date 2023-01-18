@@ -49,17 +49,21 @@ HTTP/1.1 400 Bad Request
 
 This endpoint will return an authentication token to be used for subsequent requests.
 
-### Inventory
+### Authenticated Endpoints
 
-The application provides the following endpoints for managing inventory items:
+The following endpoints require an authentication token to be passed in the `Authorization` header of the request.
 
-#### Retrieve a list of all inventory items
-Endpoint:
+#### Inventory
+Endpoints:
 - `GET /inventory` - Retrieve a list of all items in the inventory
 - `GET /inventory/:id` - Retrieve a specific item by its ID
 - `POST /inventory` - Add a new item to the inventory
 - `PUT /inventory/:id` - Update an existing item in the inventory
 - `DELETE /inventory/:id` - Remove an item from the inventory
+
+Headers:
+
+Authorization: Token abcd1234efgh5678
 
 ### Orders
 - `GET /orders` - Retrieve a list of all orders
@@ -68,6 +72,10 @@ Endpoint:
 - `PUT /orders/:id` - Update an existing order
 - `DELETE /orders/:id` - Cancel an existing order
 
+Headers:
+
+Authorization: Token abcd1234efgh5678
+
 ### Customers
 - `GET /customers` - Retrieve a list of all customers
 - `GET /customers/:id` - Retrieve a specific customer by its ID
@@ -75,11 +83,19 @@ Endpoint:
 - `PUT /customers/:id` - Update an existing customer
 - `DELETE /customers/:id` - Remove a customer
 
+Headers:
+
+Authorization: Token abcd1234efgh5678
+
 ### Checkout
 - `POST /checkout` - Create a new checkout
 - `GET /checkout/:id` - Retrieve a specific checkout by its ID
 - `PUT /checkout/:id` - Update an existing checkout
 - `DELETE /checkout/:id` - Cancel an existing checkout
+
+Headers:
+
+Authorization: Token abcd1234efgh5678
 
 
 
