@@ -5,6 +5,49 @@ This is an API for a pharmacy checkout system
 ## API Endpoints
 
 The following are the available API endpoints for the application:
+### Login
+
+The application provides a login feature that allows users to authenticate using their username and password.
+
+##### Endpoint
+
+POST /login/
+
+##### Parameters
+- `username`: the username of the user (required)
+- `password`: the password of the user (required)
+
+##### Example Request
+
+POST /login/
+
+##### Parameters
+- `username`: the username of the user (required)
+- `password`: the password of the user (required)
+
+##### Example Request
+
+{
+"username": "john",
+"password": "password123"
+}
+##### Example Success Response
+
+HTTP/1.1 200 OK
+
+{
+"token": "abcd1234efgh5678"
+}
+
+##### Example Error Response
+
+HTTP/1.1 400 Bad Request
+
+{
+"error": "Invalid credentials"
+}
+
+This endpoint will return an authentication token to be used for subsequent requests.
 
 ### Inventory
 - `GET /inventory` - Retrieve a list of all items in the inventory
