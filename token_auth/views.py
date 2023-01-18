@@ -14,24 +14,17 @@ def login(request):
 
     user = authenticate(request, email=email, password=password)
 
-    print(user.id)
-
     if user is not None:
         # generate and return the token
-        unique_id = get_random_string(length=32)
-     
-        print(user)
-
         token = Token.objects.get(user_id=user.id)
 
         if not token:
             # update the created time of the token to keep it valid
             created = datetime.datetime.now(datetime.timezone.utc)
-
+            key = get_random_string(length=32)
+     
             token = Token.objects.create(
-            user=user, key=unique_id, created=created)
-
-
+            user=user, key=key, created=created)
         return Response({'token': token.key})
     else:
         return Response({'error': 'Invalid credentials'}, status=400)
