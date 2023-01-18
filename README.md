@@ -47,10 +47,8 @@ You can then log in to the admin interface at http://127.0.0.1:8000/admin/ and s
 ## Additional notes
 
 - Make sure you have the correct version of python and pip installed before running the above command.
-- Make sure the web server user can read the 'my.cnf' file or you can also specify the path to the 'my.cnf' file in the settings.py file.
-- In the `my.cnf` file you will need to specify the following fields:
+- Update the settings.py database section with the correct:
 
-[client]
 database = mydatabase
 user = mydatabaseuser
 password = mypassword
