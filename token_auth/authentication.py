@@ -6,6 +6,9 @@ from .models import Token
 class CustomTokenAuthentication(TokenAuthentication):
 
     def authenticate_credentials(self, key):
+        if self.request.path == '/login/':
+            return None
+
         try:
             token = Token.objects.get(key=key)
         except Token.DoesNotExist:
