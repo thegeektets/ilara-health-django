@@ -50,6 +50,9 @@ REST_FRAMEWORK = {
         'token_auth.authentication.CustomTokenAuthentication', ],
 }
 
+AUTHENTICATION_BACKENDS = ['token_auth.backend.EmailBackend']
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
