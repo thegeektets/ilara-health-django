@@ -1,3 +1,13 @@
+from token_auth.models import Token
+
+
 from django.contrib import admin
 
-# Register your models here.
+
+admin.site.register(Token)
+
+
+
+
+
+
