@@ -18,10 +18,11 @@ class OrderViewSet(viewsets.ModelViewSet):
             return Response({'error': 'order items required'}, status=400)
         order_items = []
         customerData = request.data.get('customer')
-        customerId = customerData['id']
-        customer = Customer.objects.get(id=customerId)
-
-        print(customerId)
+        if customerData != '' and customerData != None :
+            customerId = customerData['id']
+            customer = Customer.objects.get(id=customerId)
+        else:
+            customer = None
 
         order_status = request.data.get('status')
         price = request.data.get('price')

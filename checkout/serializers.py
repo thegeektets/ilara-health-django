@@ -9,4 +9,4 @@ class CheckoutSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Checkout
-        fields = ('id', 'orders', 'customer', 'total_price', 'status')
+        fields = ('id', 'orders', 'customer', 'total_price')
