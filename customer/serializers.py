@@ -11,6 +11,6 @@ class CustomerSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         if 'user' not in validated_data:
-            user = User.objects.create(username=validated_data['email'])
+            user = User.objects.create(username=validated_data['email'], email=validated_data['email'])
             validated_data['user'] = user
         return super().create(validated_data)
