@@ -53,13 +53,25 @@ This endpoint will return an authentication token to be used for subsequent requ
 
 The following endpoints require an authentication token to be passed in the `Authorization` header of the request.
 
-#### Inventory
-Endpoints:
-- `GET /inventory` - Retrieve a list of all items in the inventory
-- `GET /inventory/:id` - Retrieve a specific item by its ID
-- `POST /inventory` - Add a new item to the inventory
-- `PUT /inventory/:id` - Update an existing item in the inventory
-- `DELETE /inventory/:id` - Remove an item from the inventory
+## Available Endpoints
+
+### Products
+- `GET /products/`: Retrieve a list of all products
+- `POST /products/`: Create a new product
+- `GET /products/<id>/`: Retrieve a specific product
+- `PUT /products/<id>/`: Update a specific product
+- `DELETE /products/<id>/`: Delete a specific product
+
+Headers:
+
+Authorization: Token abcd1234efgh5678
+
+### Categories
+- `GET /categories/`: Retrieve a list of all categories
+- `POST /categories/`: Create a new category
+- `GET /categories/<id>/`: Retrieve a specific category
+- `PUT /categories/<id>/`: Update a specific category
+- `DELETE /categories/<id>/`: Delete a specific category
 
 Headers:
 
