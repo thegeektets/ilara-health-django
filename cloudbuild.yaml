@@ -1,9 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/gifted-veld-375301
-/ilara_pharmacy', '.']
+  args: ['build', '-t', 'gcr.io/gifted-veld-375301/ilara_pharmacy', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/gifted-veld-375301
-/ilara_pharmacy']
+  args: ['push', 'gcr.io/gifted-veld-375301/ilara_pharmacy']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
