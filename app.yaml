@@ -1,3 +1,0 @@
-runtime: python37
-entrypoint: gunicorn wsgi --bind 0.0.0.0:$PORT
-env: flex

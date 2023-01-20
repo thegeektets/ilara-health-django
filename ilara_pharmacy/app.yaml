@@ -1,0 +1,6 @@
+runtime: python37
+entrypoint: gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT
+env: flex
+env_variables:
+  GOOGLE_ENTRYPOINT: "gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT"
+
