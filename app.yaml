@@ -1,6 +1,21 @@
 runtime: python37
-entrypoint: gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT
 env: flex
-env_variables:
-  GOOGLE_ENTRYPOINT: "gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT"
+entrypoint: gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT
 
+env_variables:
+  DJANGO_SETTINGS_MODULE: ilara_pharmacy.settings
+  SECRET_KEY: 'django-insecure-4i#17n(idewq8#7^gwo4guyn@t93qx&k7g-xp5p-f-_^a_x179'
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 10
+  cool_down_period_sec: 120
+  cpu_utilization:
+    target_utilization: 0.8
+
+handlers:
+- url: /static
+  static_dir: static/
+
+- url: /.*
+  script: auto
