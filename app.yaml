@@ -1,3 +1,3 @@
 runtime: python37
-entrypoint: gunicorn ilara_pharmacy.wsgi --bind 0.0.0.0:$PORT
+entrypoint: gunicorn wsgi --bind 0.0.0.0:$PORT
 env: flex
